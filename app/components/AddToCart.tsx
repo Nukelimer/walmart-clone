@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/store";
 import { Product } from "@/typings/productTyping";
 import React from "react";
+import RemoveCart from "./RemoveCart";
 
 function AddToCart({ product }: { product: Product }) {
   const [cart, addToCart] = useCartStore((state) => [
@@ -23,8 +24,8 @@ function AddToCart({ product }: { product: Product }) {
 
   if (checkHowManyItemInCart > 0) {
     return (
-      <div className="flex space-x-5 items-center">
-        <p>-</p>
+      <div className="flex space-x-5 items-center hover:!animate-none">
+        <RemoveCart product={product} />
         <span>{checkHowManyItemInCart}</span>
 
         <Button onClick={AddToCartHandler}>+</Button>

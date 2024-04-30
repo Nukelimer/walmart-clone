@@ -14,7 +14,7 @@ function Product({ product }: { product: Organic }) {
         pathname: "/product",
         query: { url: product.url },
       }}
-      className="p-5  h-full rounded-md relative flex flex-col hover:transition-all hover:animate-pulse hover:scale-110 hover:delay-1000">
+      className="p-5  h-full rounded-md relative flex flex-col hover:transition-all hover:animate-pulse  hover:delay-1000">
       <Image
         src={product.image}
         alt={product.title}

@@ -51,7 +51,7 @@ async function ProductHome({ searchParams: { url } }: Props) {
           />
         </div>
       ) : (
-        <div className=" hover:transition-all hover:animate-pulse hover:delay-1000 cursor-pointer p-4 lg:p-10 flex flex-col md:flex-row w-full">
+        <div className=" cursor-pointer p-4 lg:p-10 flex flex-col md:flex-row w-full">
           <div className=" hidden md:inline space-y-4">
             {product?.images.map((img, i) => {
               return (
